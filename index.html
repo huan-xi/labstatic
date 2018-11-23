@@ -9,43 +9,14 @@
     <title>博客系统首页</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
 <style type="text/css">
-    .line {
-        margin: 18px 5px 5px;
-        height: 15px;
-        border-left: solid 1px #bad5ba;
-    }
 
-    .navbar {
-        margin: 0;
-    }
-
-    .dropdown .dropdown-menu {
-        min-width: 120px;
-    }
-
-    @media screen and (max-width: 766px) {
-        .line {
-            display: none !important;
-        }
-
-        .carousel-inner > .item > img {
-            height: 260px !important;
-        }
-    }
-
-    .carousel-inner > .item > img {
-        width: 100%;
-        height: 340px;
-    }
-    .search{
-        padding-top: 10px !important;
-    }
 </style>
 <body>
 <div class="container">
+    <!--导航条-->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -61,24 +32,25 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#"><i class="fa fa-home"></i> 首页<span class="sr-only">(current)</span></a>
+                    <li class="active"><a href="#"><i class="fa fa-home"></i> 首页<span
+                            class="sr-only">(current)</span></a>
                     </li>
                     <li class="line"></li>
                     <li><a href="#"><i class="fa fa-pencil-square-o"></i> 博客</a></li>
                     <li class="line"></li>
-                    <li><a href="#"><i class="fa fa-pie-chart"></i> 团队成员</a></li>
+                    <li><a href="#"><i class="fa fa-pie-chart"></i> 资料下载</a></li>
                     <li class="line"></li>
-                    <li><a href="#"><i class="fa fa-exclamation-circle"></i> 关于</a></li>
+                    <li><a href="#"><i class="fa fa-exclamation-circle"></i>新闻动态</a></li>
                     <li class="line"></li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><i
                                 class="fa fa-flask"></i> 更多功能 <span class="fa fa-angle-down"></span> </a>
                         <ul class="dropdown-menu">
                             <li><a href="#"><i class="fa fa-comment"></i> 留言互动</a></li>
-                            <li><a href="#"><i class="fa fa-exclamation-circle"></i> 联系我们</a></li>
+                            <li><a href="#"><i class="fa fa-exclamation-circle"></i>关于我们</a></li>
                         </ul>
                     </li>
-                    <li class="right-ioc"><a href="#" data-toggle="modal" data-target="#myLogin">登入</a></li>
+                    <li class="right-ioc"><a href="login.html">登入</a></li>
                     <li class="line right-line right-ioc"></li>
                     <li class="right-ioc"><a href="#" data-toggle="modal" data-target="#mySearch">注册</a></li>
                 </ul>
@@ -122,39 +94,35 @@
             <div class="col-md-3 ">
                 <!--右侧搜索-->
                 <ul class="list-unstyled souul">
-                    <form  class="search" method="get" action="">
+                    <form class="search" method="get" action="">
                         <div class="input-group">
-                            <input name="keyword" value="请善用搜索功能" class="form-control search soutext" type="text" onfocus="if (value =='请善用搜索功能'){value =''}" onblur="if (value ==''){value='请善用搜索功能'}">
-                            <div class="input-group-btn"> <button class="btn btn-default soubtn">搜索</button> </div>
+                            <input name="keyword" value="请善用搜索功能" class="form-control search soutext" type="text"
+                                   onfocus="if (value =='请善用搜索功能'){value =''}"
+                                   onblur="if (value ==''){value='请善用搜索功能'}">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default soubtn">搜索</button>
+                            </div>
                         </div>
                     </form>
                 </ul>
-                <div class="widget-head-color-box navy-bg p-lg text-center">
-                    <div class="m-b-md">
-                        <h2 class="font-bold no-margins">
-                            王宇
-                        </h2>
-                        <small>网豫游戏创始人</small>
+
+                <div class="info-box text-center hidden-xs hidden-sm ">
+                    <div class="">
+                        <h3>113A实验室</h3>
                     </div>
-                    <img src="img/a4.jpg" class="img-circle circle-border m-b-md" alt="profile">
+                    <img src="img/logo.png" class="img-circle logo-img" alt="profile">
                     <div>
-                        <span>100 文章</span> |
-                        <span>350 好友</span> |
-                        <span>610 关注</span>
+                        <span>0 文章</span> |
+                        <span>0 用户</span> |
+                        <span>0 评论</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div>
-        <div class="indexebox indexebox-l">
-            <i class="fa fa-picture-o"></i>
-            <h4>相册图库</h4>
-            <p>相册图库介绍</p>
-            <a class="btn btn-info btn-sm" href="https://www.0dayhack.com/">点击进入</a>
-        </div>
-    </div>
 </div>
+<!--背景图-->
+<!--<div class="bg-fixed"></div>-->
 </body>
 
 <script src="js/jquery.min.js"></script>
