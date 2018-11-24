@@ -15,15 +15,50 @@
     <link href="css/main.css" rel="stylesheet">
 
     <style>
-        .menu-title{
+        .menu-title {
             display: block;
-            padding-left: 15px;
+            padding: 10px 15px;
         }
-        .menu-title:active{
-            background-color: rebeccapurple;
+
+        .menu-title:active {
+            background-color: #e7e7e7;
         }
+
+        .menu-content a:hover {
+            background-color: #e7e7e7;
+        }
+
+        .menu-content > ul li a {
+            padding-left: 40px;
+            color: #666868;
+        }
+
         .left-nav {
-            background-color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0.6);
+            width: 170px;
+            float: left;
+        }
+
+        .left-nav ul {
+            padding-left: 0;
+        }
+
+        .menu-title .fa-angle-down {
+            float: right;
+        }
+        .menu-content ul >  .active a{
+            color: #0d8ddb;
+        }
+        .left-nav a {
+            padding: 14px 20px 14px 25px;
+            width: 100%;
+        }
+
+        .left-nav i {
+            margin-right: 10px;
+        }
+        .right-content{
+            margin-left: 20px;
         }
     </style>
 </head>
@@ -65,41 +100,79 @@
                     </li>
                     <li class="right-ioc"><a href="login.html">登入</a></li>
                     <li class="line right-line right-ioc"></li>
-                    <li class="right-ioc"><a href="#" data-toggle="modal" data-target="#mySearch">注册</a></li>
+                    <li class="right-ioc"><a href="register.html">注册</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="row">
-        <div class="col-lg-2">
-            <div class="left-nav">
-                <a class="menu-title" data-toggle="collapse" data-parent="#accordion"
-                   href="#menu1">
-                    菜单一
-                </a>
-                <div id="menu1" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                        菜单
-                    </div>
-                </div>
+    <!--左侧菜单-->
+    <div class="left-nav">
+        <!--菜单1-->
+        <div>
+            <a class="menu-title" data-toggle="collapse" data-parent="#accordion"
+               href="#menu1">
+                <i class="fa fa-tachometer"></i>
+                个人首页
+                <span class="fa fa-angle-down"></span>
+            </a>
+            <div id="menu1" class="menu-content collapse in">
+                <ul>
+                    <li role="presentation" class="active"><a href="#index" aria-controls="info" role="tab" data-toggle="tab"><i class="fa fa-home"></i>主页</a></li>
+                    <li role="presentation" ><a href="#info" aria-controls="info" role="tab" data-toggle="tab"><i class="fa fa-id-card-o"></i>资料修改</a></li>
+                </ul>
             </div>
-            <div class="left-nav">
-                <a class="menu-title" data-toggle="collapse" data-parent="#accordion"
-                   href="#menu2">
-                    菜单一
-                </a>
-                <div id="menu2" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                        菜单
-                    </div>
+        </div>
+        <!--菜单2-->
+        <div>
+            <a class="menu-title" data-toggle="collapse" data-parent="#accordion"
+               href="#menu2">
+                <i class="fa fa-language"></i>
+                博客管理
+                <span class="fa fa-angle-down"></span>
+            </a>
+            <div id="menu2" class="menu-content collapse in">
+                <ul>
+                    <li><a><i class="fa fa-pencil-square-o"></i>发布文章</a></li>
+                    <li><a><i class="fa fa-gavel"></i>文章管理</a></li>
+                    <li><a><i class="fa fa-comment"></i>评论管理</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <a class="menu-title">
+                <i class="fa fa-sign-in"></i>
+                安全退出
+            </a>
+        </div>
+    </div>
+    <!--右侧内容页-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade active" id="index">this is home</div>
+                    <div role="tabpanel" class="tab-pane fade" id="info">this is profile</div>
+                    <div role="tabpanel" class="tab-pane fade" id="messages">messages</div>
+                    <div role="tabpanel" class="tab-pane fade" id="settings">settings</div>
                 </div>
             </div>
         </div>
     </div>
+
+
 </div>
 
 </body>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".menu-title").click(function () {
+            $fa_down = $(this).children(".fa-angle-down");
+            $fa_down.hasClass("fa-angle-down-rotate") ? $fa_down.removeClass("fa-angle-down-rotate") : $fa_down.addClass("fa-angle-down-rotate");
+        });
+    })
+</script>
 </html>

@@ -9,6 +9,16 @@
     -o-transform: rotate(180deg);
     transform: rotate(180deg)
 }
+.fa-angle-down-rotate{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+li{
+    list-style: none;
+    display: flex;
+}
 a, a:hover, a:link, a:visited {
     color: #222;
     text-decoration: none;
@@ -17,7 +27,7 @@ a, a:hover, a:link, a:visited {
 .navbar-nav>.dropdown:hover>.dropdown-menu {
     opacity: 1;
 }
-.navbar-nav .fa-angle-down {
+.fa-angle-down {
     -webkit-transition: all .25s;
     -moz-transition: all .25s;
     -ms-transition: all .25s;
